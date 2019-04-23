@@ -122,7 +122,7 @@ def funSites():
   # Local variables
   url = ''
   userChoice = 0
-  EXIT_FUN = 5
+  EXIT_FUN = 6
 
   # Continue to gather user input until user elects to exit
   while(True):
@@ -132,15 +132,16 @@ def funSites():
     print('2.) CoasterForce')
     print('3.) Alltrails')
     print('4.) Instagram')
-    print('5.) Exit to Main Menu')
+    print('5.) My Blog')
+    print('6.) Exit to Main Menu')
 
     # Get user input
     print('\nEnter Input', end=': ')
     userChoice = int(input())
 
     # Assign local variable based upon user selection. Loop exits if user selects 6
-    if userChoice != 1 and userChoice != 2 and userChoice != 3 and userChoice != 4 and userChoice != 5:
-      print('Must only select options 1-5')
+    if userChoice != 1 and userChoice != 2 and userChoice != 3 and userChoice != 4 and userChoice != 5 and userChoice != 6:
+      print('Must only select options 1-6')
     elif userChoice == EXIT_FUN:
       break
     else:    
@@ -152,6 +153,8 @@ def funSites():
         url = alltrails
       elif userChoice == 4:
         url = instagram
+      elif userChoice == 5:
+        url = myBlog
 
     # Send user to url they requested
     webbrowser.open(url)     
